@@ -1,0 +1,30 @@
+{
+  "name": "trilha-node-chapter-2",
+  "version": "1.0.0",
+  "description": "Repositório do capítulo 2 da Trilha NodeJS by Rocketseat",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "typescript": "^4.4.4"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "@types/node": "^16.11.6",
+    "ts-node-dev": "^1.1.8"
+  },
+  "scripts": {
+    "dev": "ts-node-dev ./src/server.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabrielbugarelli/trilha-node-chapter-2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gabrielbugarelli/trilha-node-chapter-2/issues"
+  },
+  "homepage": "https://github.com/gabrielbugarelli/trilha-node-chapter-2#readme"
+}
