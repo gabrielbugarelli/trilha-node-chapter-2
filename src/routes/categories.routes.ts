@@ -1,9 +1,9 @@
 import {Request, Response, Router} from 'express';
-import { PostgresCategoriesRepository } from '../repository/PostgresCategoriesRepository';
-import { CreateCategoryServices } from '../services/CreateCategoryService';
+import { CategoriesRepository } from '../modules/Cars/repository/CategoriesRepository';
+import { CreateCategoryServices } from '../modules/Cars/services/CreateCategoryService';
 
 export const categoriesRoutes = Router();
-const categoriesRepository = new PostgresCategoriesRepository(); 
+const categoriesRepository = new CategoriesRepository(); 
 
 categoriesRoutes.post('/', async (request: Request, response: Response) => {
   const { name, description } = await request.body;
