@@ -8,8 +8,12 @@ export class ListCategoriesUseCase {
     this.categoriesRepository = categoriesRepository;
   }
 
-  execute(): Category[] | null {
+  execute(): Category[] {
     const categories = this.categoriesRepository.list();
+
+    if(!categories) {
+      throw Error("Not a categories");
+    }
 
     return categories;
   }
