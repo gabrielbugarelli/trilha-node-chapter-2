@@ -7,5 +7,43 @@
     "contact": {
       "email": "gabrielfonsecaoficial@gmail.com"
     }
+  },
+  "paths": {
+    "/categories": {
+      "post": {
+        "tags": ["Category"],
+        "sumary": "Create a category",
+        "description": "Create a new Category",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "Object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "description": {
+                    "type": "string"
+                  }
+                },
+                "example": {
+                  "name": "Category new sample",
+                  "description": "Category description sample"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "500": {
+            "description": "Category already exists"
+          }
+        }
+      }
+    }
   }
 }
