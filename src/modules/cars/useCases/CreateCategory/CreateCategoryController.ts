@@ -9,11 +9,11 @@ export class CreateCategoryController {
     this.createCategoryUseCase = createCategoryUseCase;
   }
 
-  async handle(request: Request, response: Response) {
+  async handle(request: Request, response: Response): Promise<Response> {
     const { name, description } = await request.body;
 
     this.createCategoryUseCase.execute({name, description});
   
-    return response.status(201).end();
+    return response.status(201).send();
   }
 }
