@@ -10,9 +10,9 @@ export class CreateCategoryController {
   }
 
   async handle(request: Request, response: Response): Promise<Response> {
-    const { name, description } = await request.body;
+    const { name, description } = request.body;
 
-    this.createCategoryUseCase.execute({name, description});
+    await this.createCategoryUseCase.execute({name, description});
   
     return response.status(201).send();
   }
