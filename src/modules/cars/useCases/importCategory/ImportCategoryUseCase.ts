@@ -1,15 +1,19 @@
 import fs from 'fs';
 import csvParse from 'csv-parse';
 import { ICategoriesRepository } from '../../repositories/ICategoriesRepository';
+import { inject, injectable } from 'tsyringe';
 
 interface IImportCategory {
   name: string;
   description: string;
 }
+@injectable()
 export class ImportCategoryUseCase {
   private categoriesRepository: ICategoriesRepository;
   
-  constructor(categoriesRepository: ICategoriesRepository) {
+  constructor(
+    @inject("CategoriesRepository")
+    categoriesRepository: ICategoriesRepository) {
     this.categoriesRepository = categoriesRepository;
   }
 
