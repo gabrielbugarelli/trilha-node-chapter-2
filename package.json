@@ -4,6 +4,7 @@
   "description": "Repositório do capítulo 2 da Trilha NodeJS by Rocketseat",
   "main": "index.js",
   "dependencies": {
+    "bcrypt": "^5.0.1",
     "csv-parse": "^4.16.3",
     "express": "^4.17.1",
     "multer": "^1.4.3",
