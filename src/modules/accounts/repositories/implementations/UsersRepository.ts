@@ -32,4 +32,14 @@ export class UsersRepository implements IUsersRepository {
 
     return user;
   }
+
+  async findById(id: string): Promise<User> {
+    const user = await this.repository.findOne(id);
+
+    if(!user) {
+      throw new Error("User not exist!");
+    }
+
+    return user;
+  }
 }
