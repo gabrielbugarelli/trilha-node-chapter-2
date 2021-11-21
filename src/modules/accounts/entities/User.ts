@@ -17,10 +17,13 @@ export class User {
   password: string = '';
 
   @Column()
-  driver_license: string | undefined;
+  driver_license: string = '';
 
   @Column()
   isAdmin: boolean | undefined;
+
+  @Column()
+  avatar: string = '';
 
   @CreateDateColumn()
   created_at: Date | undefined;
