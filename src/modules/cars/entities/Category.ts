@@ -5,14 +5,14 @@ import {v4 as uuidV4} from 'uuid';
 export class Category {
 
   @PrimaryColumn()
-  id?: string;
+  id: string;
 
   @Column()
-  name?: string;
-  description?: string;
+  name: string;
+  description: string;
 
   @CreateDateColumn()
-  created_at?: Date;
+  created_at: Date;
 
   constructor() {
     if(!this.id) {
