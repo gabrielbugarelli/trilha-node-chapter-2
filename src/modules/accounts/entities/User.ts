@@ -5,28 +5,28 @@ import { Column, CreateDateColumn, Entity, PrimaryColumn } from 'typeorm';
 export class User {
 
   @PrimaryColumn()
-  id: string = '';
+  id: string;
 
   @Column()
-  name: string = '';
+  name: string;
 
   @Column()
-  email: string = '';
+  email: string;
 
   @Column()
-  password: string = '';
+  password: string;
 
   @Column()
-  driver_license: string = '';
+  driver_license: string;
 
   @Column()
-  isAdmin: boolean | undefined;
+  isAdmin: boolean;
 
   @Column()
-  avatar: string = '';
+  avatar: string;
 
   @CreateDateColumn()
-  created_at: Date | undefined;
+  created_at: Date;
 
   constructor() {
     if(!this.id) {
